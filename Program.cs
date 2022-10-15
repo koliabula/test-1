@@ -6,18 +6,32 @@
     Console.WriteLine();
 }
 
-String [] Sample3 (string [] str){
-    String [] StrResult = new string [str.Length];
+int ArrayDimensionCalculation(string [] str){
+    int count = 0;
     for (int i = 0; i < str.Length; i++)
     {
         if (str[i].Length <= 3){
-            StrResult[i] = str[i];
+            count++;
+        }
+    }
+    return count;
+}
+
+String [] Sample3 (string [] str){
+    String [] StrResult = new String [ArrayDimensionCalculation(str)];
+    for (int i = 0, j = 0; i < str.Length; i++)
+    {
+        if (str[i].Length <= 3){
+            StrResult[j] = str[i];
+            j++;
         }
     }
     return StrResult;
 }
 
-String [] StrArray = {"text","tex", "te", "t"};
-PrintArray(Sample3(StrArray));
+
+String [] StrArray = {"text","tex", "te","Kolia", "T", "qwe", "qwer"};
+String [] StrArrayResult = Sample3(StrArray);
+PrintArray(StrArrayResult);
 
 
