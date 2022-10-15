@@ -1,7 +1,7 @@
 ﻿void PrintArray (string [] ar){
     for (int i = 0; i < ar.Length; i++)
     {
-        Console.Write($"{ar[i]} ");
+        Console.Write($"{ar[i]}| ");
     }
     Console.WriteLine();
 }
@@ -30,7 +30,9 @@ String [] Sample3 (string [] str){
 }
 
 
-String [] StrArray = {"text","tex", "te","Kolia", "T", "qwe", "qwer"};
+String [] StrArray = {"text","tex", "te","Kolia", "T", "В лесу родилась ёлочка"
+                                ,"15987Э", "qwe","18", "мне", "уже", "qwer", "я"};
+
 String [] StrArrayResult = Sample3(StrArray);
 PrintArray(StrArrayResult);
 
